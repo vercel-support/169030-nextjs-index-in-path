@@ -1,11 +1,12 @@
 export const dynamic = 'force-static'
 // export const revalidate = 60;
 
-export default function Page({ params }: { params: { parts: string[] } }) {
+export default function Page({ params }: { params: { parts: string[], language: string } }) {
   const now = new Date().toISOString();
 
   return <>
-    <div>Parts: /catch-all-example/{params.parts?.join('/')}</div>
+    <div>Language: {params.language}</div>
+    <div>Parts: /academy/{params.parts?.join('/')}</div>
     <div>Generated at: {now}</div>
   </>
 }
