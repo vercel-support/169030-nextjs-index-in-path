@@ -13,8 +13,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 export async function generateStaticParams() {
 
   return [
-    { params: { slug: ['academy'] } },
-    { params: { slug: ['academy', 'glossar'] } },
-    { params: { slug: ['academy', 'glossar', 'index'] } }
+    { slug: ['academy'] },
+    { slug: ['academy', 'glossar'] },
+    { slug: ['academy', 'glossar', 'index'] }
   ]
 }
