@@ -1,3 +1,10 @@
+export const revalidate = 60;
+
 export default function Page({ params }: { params: { slug: string[] } }) {
-  return <div>Slug: /catch-all-example/{params.slug?.join('/')}</div>
+  const now = new Date().toISOString();
+
+  return <>
+    <div>Slug: /catch-all-example/{params.slug?.join('/')}</div>
+    <div>Generated at: {now}</div>
+  </>
 }
