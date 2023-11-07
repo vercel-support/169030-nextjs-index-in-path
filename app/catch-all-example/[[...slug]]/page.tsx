@@ -1,3 +1,4 @@
+export const dynamic = 'auto'
 export const revalidate = 60;
 
 export default function Page({ params }: { params: { slug: string[] } }) {
